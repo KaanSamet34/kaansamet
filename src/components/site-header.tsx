@@ -11,6 +11,8 @@ import blocks from "@/registry/__blocks__.json"
 import { getAllDocs } from "@/features/doc/data/documents"
 import type { DocPreview } from "@/features/doc/types/document"
 
+import { NavItem } from "./nav"
+
 const BrandContextMenu = dynamic(
   () => import("@/components/brand-context-menu")
 )
@@ -31,11 +33,10 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 max-w-screen overflow-x-clip bg-background px-2">
       <div className="screen-line-top screen-line-bottom mx-auto flex h-(--header-height) items-center gap-2 border-r border-line pr-2 group-has-data-[slot=layout-wide]/layout:container after:z-1 after:bg-border sm:gap-4 md:max-w-3xl">
         <BrandContextMenu>
-          <Link href="/" aria-label="Home">
-            <ChanhDaiMark className="h-8 shrink-0" />
-          </Link>
+          <NavItem href="/" aria-label="Home">
+            Kaan
+          </NavItem>
         </BrandContextMenu>
-
         <div className="flex-1" />
 
         <NavDesktop items={MAIN_NAV} />

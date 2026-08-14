@@ -53,11 +53,6 @@ export function SocialLinks() {
           ))}
         </ul>
       </PanelContent>
-
-      <HandwrittenNote className="-top-4 right-full mr-4 hidden w-20 flex-col items-end lg:flex">
-        <span className="-rotate-6">say hi</span>
-        <HandwrittenArrow className="size-7 translate-x-4 -scale-x-100 -rotate-6" />
-      </HandwrittenNote>
     </Panel>
   )
 }

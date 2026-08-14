@@ -14,8 +14,8 @@ export const SOCIAL = {
   },
   linkedin: {
     title: "LinkedIn",
-    handle: "ncdai",
-    href: "https://linkedin.com/in/ncdai",
+    handle: "kaan-samet-çekmez",
+    href: "https://linkedin.com/in/kaan-samet-çekmez-778938384",
     sameAs: true,
   },
 } satisfies Record<string, SocialProfile>
