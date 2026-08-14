@@ -35,7 +35,6 @@ My areas of interest include:
   - I've implemented an Adaptive Large Neighborhood Search (ALNS) algorithm to solve pickup-and-delivery optimization problems.
 
 - Operating Systems
-  - - Operating Systems
   - I use Linux (Arch) as my primary operating system and am comfortable working in a command-line environment. I regularly use shell utilities, development tools, and scripting to streamline my workflow. I find that it is often more convenient for software development than the alternatives.
 `,
   avatar:
