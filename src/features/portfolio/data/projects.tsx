@@ -63,7 +63,7 @@ export const PROJECTS: Project[] = [
 - Achieved significant performance improvements on benchmark datasets from the literature.
 - Developed a user-friendly graphical interface using the GTK library.`,
     icon: <Truck />,
-    isExpanded: true,
+    isExpanded: false,
     link: "",
   },
 
@@ -91,7 +91,7 @@ export const PROJECTS: Project[] = [
 - Used cross-validation and hyperparameter tuning to optimize model performance.
 - Built a Streamlit web application around the best-performing model, CatBoost.`,
     icon: <Sparkles />,
-    isExpanded: true,
+    isExpanded: false,
     link: "",
   },
 ]
