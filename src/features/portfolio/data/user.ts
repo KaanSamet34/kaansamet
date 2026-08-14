@@ -14,7 +14,7 @@ export const USER: User = {
   address: "Istanbul, Türkiye",
   phoneNumberB64: "KzkwIDUwNSAwNzkgMzI4NA==", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
   emailB64: "a2Fhbi5zYW1ldDA0QG91dGxvb2suY29t", // base64 encoded
-  website: "https://kaansamet34.github.io/",
+  website: "https://github.com/KaanSamet34/kaansamet",
   jobTitle: "4th Year Student",
   jobs: [],
   about: `I'm Kaan, a fourth-year Computer Engineering student at İstinye University (GPA: 3.80).
