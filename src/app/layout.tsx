@@ -7,7 +7,7 @@ import { NuqsAdapter } from "nuqs/adapters/next/app"
 import type { WebSite, WithContext } from "schema-dts"
 
 import { JSON_LD_ID, personJsonLd } from "@/config/json-ld"
-import { META_THEME_COLORS, SITE_INFO, X_HANDLE } from "@/config/site"
+import { META_THEME_COLORS, SITE_INFO } from "@/config/site"
 import { fontVariables } from "@/lib/fonts"
 import { JsonLdScript } from "@/lib/json-ld"
 import { Providers } from "@/components/providers"
@@ -72,12 +72,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    card: "summary_large_image",
-    site: X_HANDLE,
-    creator: X_HANDLE,
-    images: [SITE_INFO.ogImage],
-  },
   icons: {
     icon: [
       {
@@ -89,12 +83,6 @@ export const metadata: Metadata = {
         sizes: "any",
         type: "image/svg+xml",
         media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "https://assets.chanhdai.com/images/favicon-dark.svg",
-        sizes: "any",
-        type: "image/svg+xml",
-        media: "(prefers-color-scheme: dark)",
       },
     ],
     apple: {

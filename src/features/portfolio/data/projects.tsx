@@ -1,3 +1,5 @@
+import { Microchip, Sigma, Sparkles, Truck } from "lucide-react"
+
 import { ChanhDaiMark } from "@/components/chanhdai-mark"
 import {
   QuaricIcon,
@@ -9,239 +11,87 @@ import type { Project } from "../types/projects"
 
 export const PROJECTS: Project[] = [
   {
-    id: "react-wheel-picker",
-    title: "React Wheel Picker",
+    id: "fusion-mcu",
+    title: "Fusion MCU",
     period: {
-      start: "05.2025",
+      start: "12.2024",
+      end: "Present",
     },
-    link: "https://react-wheel-picker.chanhdai.com",
     skills: [
-      "Open Source",
-      "React",
-      "TypeScript",
-      "Monorepo",
-      "Turborepo",
-      "pnpm-workspace",
-      "Package Publishing",
-      "NPM Registry",
-      "GitHub Actions",
+      "Verilog",
+      "SystemVerilog",
+      "UVM",
+      "Verification",
+      "RISC-V",
+      "Assembly",
+      "C",
+      "AXI-Lite",
+      "UART",
+      "SPI/QSPI",
+      "I2C",
+      "GPIO",
+      "Timer",
+      "FPGA",
+      "Teknofest",
     ],
-    description: `iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support. / Backed by [▲Vercel OSS Program](https://vercel.com/blog/summer-2025-oss-program#react-wheel-picker)
-- Natural touch scrolling with smooth inertia, mouse drag and scroll for desktop
-- Infinite loop scrolling
-- Unstyled core for complete style customization
-- Full keyboard navigation and type-ahead search
-`,
-    icon: <ReactWheelPickerIcon />,
+    description: `RISC-V-based microcontroller developed as the captain of the Fusion team participating in the Teknofest Chip Design Competition.
+- Led the development of the project and coordinated the work of team members throughout the design and implementation process.
+- Designed and developed UART and QSPI peripherals according to the project specifications.
+- Oversaw the design and UVM-based verification of the microcontroller's peripherals.
+- Integrated the peripherals into an open-source RISC-V processor through an AXI-Lite interconnect.
+- Implemented, synthesized, and validated the complete design on FPGA development boards.
+- Developed and successfully executed low-level drivers using RISC-V Assembly and C.
+- Created automation scripts to accelerate the development workflow.
+- Prepared technical documentation and system block diagrams.
+- Achieved a score of 84.75/100 on the Preliminary Design Report and 70/100 on the Detailed Design Report during the Teknofest Chip Design Competition.`,
+    icon: <Microchip />,
     isExpanded: true,
+    link: "",
   },
-  {
-    id: "chanhdaidotcom",
-    title: "chanhdai.com",
-    period: {
-      start: "01.2025",
-    },
-    link: "https://github.com/ncdai/chanhdai.com",
-    skills: [
-      "Open Source",
-      "Next.js 16",
-      "Tailwind CSS v4",
-      "Radix UI",
-      "Base UI",
-      "Motion",
-      "shadcn/ui",
-      "shadcn registry",
-      "Vercel",
-    ],
-    description: "A pixel-perfect dev portfolio and shadcn registry.",
-    icon: <ChanhDaiMark />,
-  },
-  {
-    id: "quaricdotcom",
-    title: "quaric.com",
-    period: {
-      start: "03.2024",
-    },
-    link: "https://quaric.com",
-    skills: [
-      "Company Project",
-      "Next.js 15",
-      "Tailwind CSS v3",
-      "shadcn/ui",
-      "Strapi 5",
-      "VNPAY-QR",
-      "Docker",
-      "Docker Compose",
-      "NGINX",
-    ],
-    icon: <QuaricIcon />,
-  },
-  {
-    id: "zadark",
-    title: "ZaDark",
-    period: {
-      start: "01.2022",
-    },
-    link: "https://zadark.com",
-    skills: [
-      "Pet Project",
-      "Open Source",
-      "Browser Extension",
-      "CLI",
-      "Docusaurus 3",
-    ],
-    description: `ZaDark adds Dark Mode, anti-peeking, customizable fonts, backgrounds, and more to Zalo Web and PC.
-- Earned 10M+ VND in net sales from a paid Safari Extension*
-- 80k+ downloads on SourceForge* (awarded Community Leader badge by SourceForge)
-- 30k+ active users via Chrome Web Store*
-- Bronze Medal — 10th Design, Manufacturing, and Application Award 2022
 
-<p class="text-muted-foreground">* Peak metrics.</p>
-`,
-    icon: <ZaDarkIcon />,
-  },
   {
-    id: "qabox",
-    title: "QABox",
+    id: "mathematical-route-optimization",
+    title: "Mathematical Route Optimization",
     period: {
-      start: "07.2023",
-      end: "07.2023",
+      start: "11.2025",
+      end: "01.2026",
     },
-    link: "https://github.com/ncdai/qabox",
+    skills: ["C++", "ALNS", "GTK", "Optimization", "Pickup & Delivery"],
+    description: `Optimization application developed to solve pickup-and-delivery problems in logistics.
+- Collaborated with an interdisciplinary team to optimize logistics operations with respect to cost and time.
+- Implemented an Adaptive Large Neighborhood Search (ALNS) algorithm in C++.
+- Achieved significant performance improvements on benchmark datasets from the literature.
+- Developed a user-friendly graphical interface using the GTK library.`,
+    icon: <Truck />,
+    isExpanded: true,
+    link: "",
+  },
+
+  {
+    id: "vehicle-price-prediction",
+    title: "ML-Based Vehicle Price Prediction",
+    period: {
+      start: "10.2025",
+      end: "01.2026",
+    },
     skills: [
-      "University Project",
-      "PHP",
-      "MySQL",
-      "MVC",
-      "Docker",
-      "Docker Compose",
+      "Python",
+      "pandas",
+      "NumPy",
+      "Matplotlib",
+      "CatBoost",
+      "Machine Learning",
+      "Data Analysis",
+      "Streamlit",
     ],
-    description:
-      "- Course: Distributed Applications — FIT@HCMUS\n- Project Score: 10/10\n- Source Code: https://github.com/ncdai/qabox",
-  },
-  {
-    id: "taskbox",
-    title: "TaskBox",
-    period: {
-      start: "07.2023",
-      end: "07.2023",
-    },
-    link: "https://github.com/ncdai/taskbox",
-    skills: [
-      "University Project",
-      "PHP",
-      "MySQL",
-      "MVC",
-      "Docker",
-      "Docker Compose",
-    ],
-    description:
-      "- Course: Distributed Applications — FIT@HCMUS\n- Project Score: 10/10\n- Source Code: https://github.com/ncdai/taskbox",
-  },
-  {
-    id: "daichat-app",
-    title: "DaiChat App",
-    period: {
-      start: "07.2020",
-      end: "07.2020",
-    },
-    link: "https://www.youtube.com/watch?v=H5U3J_W1low",
-    skills: ["University Project", "Java", "Java Swing", "Java Networking"],
-    description: `- Course: Java Application Programming — FIT@HCMUS
-- Requirement: Developed a real-time chat application using Java technologies
-- Project Score: 10/10
-- Source Code:
-  - Server: https://github.com/ncdai/ltudjava-summer2020-chatapp_server
-  - Client: https://github.com/ncdai/ltudjava-summer2020-chatapp_client`,
-  },
-  {
-    id: "qlsv-app",
-    title: "QLSV App",
-    period: {
-      start: "06.2020",
-      end: "06.2020",
-    },
-    link: "https://www.youtube.com/watch?v=tG9SZEBrwog",
-    skills: ["University Project", "Java", "Java Swing", "Hibernate", "MySQL"],
-    description: `- Course: Java Application Programming — FIT@HCMUS
-- Requirement: Built a student management system with role-based functionalities using Java technologies
-- Project Score: 10/10
-- Source Code: https://github.com/ncdai/ltudjava-summer2020-hibernate`,
-  },
-  {
-    id: "penphy",
-    title: "Penphy",
-    period: {
-      start: "01.2019",
-      end: "08.2019",
-    },
-    link: "https://www.youtube.com/watch?v=EdU7rUO-UA4",
-    skills: ["Startup Project", "JavaScript", "React Native"],
-    description: "2nd Prize — Business Startup Competition 2019",
-  },
-  {
-    id: "unlimitedstudy",
-    title: "UnlimitedStudy",
-    period: {
-      start: "01.2017",
-      end: "08.2018",
-    },
-    link: "https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm",
-    skills: [
-      "National Competition",
-      "Creative Software",
-      "PHP",
-      "Laravel 4",
-      "MySQL",
-      "jQuery",
-      "Bootstrap 3",
-    ],
-    description: `UnlimitedStudy is a website that provides teaching and learning support tools for teachers and students.
-- 3rd Prize — National Science and Engineering Fair 2018 (ViSEF)
-- 1st Prize — Can Tho City Science and Engineering Fair 2018
-- 3rd Prize — National Young Informatics Contest 2018
-- 2nd Prize — Can Tho City Youth and Children’s Creativity Contest 2018
-- 3rd Prize — Can Tho City Young Informatics Contest 2018
-- Reached 7k+ users, mainly high school students in Can Tho City
-- Pilot implemented in high schools across Can Tho City with English quizzes, supervised by English subject specialists from the Can Tho City Department of Education and Training`,
-  },
-  {
-    id: "dmessage",
-    title: "DMessage",
-    period: {
-      start: "05.2017",
-      end: "05.2017",
-    },
-    link: "https://github.com/ncdai/DMessage",
-    skills: [
-      "Self-learning Project",
-      "Pet Project",
-      "Express.js",
-      "Socket.io",
-      "MongoDB",
-      "Mongoose ODM",
-    ],
-    description:
-      "A Messenger clone built to practice real-time communication using Socket.IO. This project showcases my self-learning journey in implementing WebSockets for instant messaging.",
-  },
-  {
-    id: "study-english",
-    title: "Study English",
-    period: {
-      start: "11.2016",
-      end: "12.2017",
-    },
-    link: "https://www.youtube.com/watch?v=OYgugvjqU4A",
-    skills: [
-      "National Competition",
-      "Creative Software",
-      "PHP",
-      "Laravel 4",
-      "MySQL",
-    ],
-    description: `Study English is a free, mobile-friendly website for high school English learning, offering vocabulary, quizzes, listening practice, and more.
-- Consolation Prize — National Youth and Children’s Creativity Contest 2016
-- 1st Prize — Can Tho City Youth and Children’s Creativity Contest 2016
-- Consolation Prize — Can Tho City Young Informatics Contest 2016`,
+    description: `Machine learning project for predicting second-hand vehicle prices.
+- Led a team developing a machine learning solution for vehicle price prediction.
+- Performed data analysis, preprocessing, and cleaning to improve model performance.
+- Evaluated six machine learning algorithms and coordinated their implementation across the team.
+- Used cross-validation and hyperparameter tuning to optimize model performance.
+- Built a Streamlit web application around the best-performing model, CatBoost.`,
+    icon: <Sparkles />,
+    isExpanded: true,
+    link: "",
   },
 ]

@@ -50,16 +50,6 @@ export default function HomePage() {
           <Separator />
 
           <Hello />
-          <SponsorsCarousel />
-          <Separator />
-
-          <Testimonials />
-          <Separator />
-
-          <Components />
-          <Separator />
-
-          <Blog />
           <Separator />
 
           <TechStack />
@@ -73,22 +63,6 @@ export default function HomePage() {
 
           <Projects />
           <Separator />
-
-          <Awards />
-          <Separator />
-
-          <Certifications />
-          <Separator />
-
-          <Bookmarks />
-          <Separator />
-
-          <Suspense fallback={<InsightsSkeleton />}>
-            <Insights />
-          </Suspense>
-          <Separator />
-
-          <Sponsors />
         </div>
       </div>
     </>

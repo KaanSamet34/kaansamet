@@ -28,19 +28,18 @@ const OPENPANEL_URL =
 
 // Not derived from `SITE_INFO.url`: that follows `NEXT_PUBLIC_APP_URL` and
 // would read `ncdai.localhost` in dev.
-const SITE_TITLE = "chanhdai.com"
+const SITE_TITLE = "kaansamet34.github.io"
 
 const SITE_SUBTITLE = packageJson.description
 
 // Must stay identical to the holder named in LICENSE: the MIT grant hangs on
 // this notice, so the two disagreeing would undercut it.
-const COPYRIGHT_HOLDER = "Chánh Đại"
+const COPYRIGHT_HOLDER = "Kaan Samet Çekmez"
 
 const TRADEMARK_POLICY_URL = `${SOURCE_CODE_GITHUB_URL}/blob/main/TRADEMARK.md`
 
 /** Footer laid out as the title block of a technical drawing. */
 export function SiteFooterCad() {
-  const xLink = SOCIAL.x
   const githubLink = SOCIAL.github
   const linkedinLink = SOCIAL.linkedin
 
@@ -50,114 +49,6 @@ export function SiteFooterCad() {
   return (
     <footer className="max-w-screen overflow-x-clip px-2">
       <div className="mx-auto border-x border-line group-has-data-[slot=layout-wide]/layout:container md:max-w-3xl">
-        <div className="screen-line-top screen-line-bottom after:z-1 after:bg-border">
-          <div className="stripe-divider h-12" />
-        </div>
-
-        <div className="relative">
-          <div className="screen-line-bottom flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 px-4 py-3 font-mono text-sm">
-            <span className="font-medium">{SITE_TITLE}</span>
-            <span className="font-sans text-muted-foreground">
-              {SITE_SUBTITLE}
-            </span>
-          </div>
-
-          <dl className="grid grid-cols-2 gap-px bg-line font-mono md:grid-cols-4">
-            <Field label="Crafted by">
-              <a
-                className="link-underline"
-                href={xLink.href}
-                target="_blank"
-                rel="noopener"
-              >
-                {xLink.handle}
-              </a>
-            </Field>
-
-            <Field label="Build">
-              <BuildValue build={build} />
-            </Field>
-
-            <Field label="Date">
-              <time dateTime={build.date}>{build.date}</time>
-            </Field>
-
-            <Field label="Registry">{registryStats.total} items</Field>
-
-            <Field label="Deployed on">Vercel</Field>
-
-            <Field label="Source code">
-              <a
-                className="link-underline"
-                href={SOURCE_CODE_GITHUB_URL}
-                target="_blank"
-                rel="noopener"
-              >
-                GitHub
-              </a>
-            </Field>
-
-            <Field label="License">
-              <a
-                className="link-underline"
-                href={LICENSE.url}
-                target="_blank"
-                rel="noopener"
-              >
-                {LICENSE.name}
-              </a>
-            </Field>
-
-            <Field label="Typeface">Geist</Field>
-
-            <Field className="col-span-2" label="Analytics">
-              <ul className="flex flex-col gap-0.5">
-                <li>
-                  <a
-                    className="link-underline"
-                    href={OPENPANEL_URL}
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    OpenPanel
-                  </a>
-                </li>
-                <li>Google Analytics</li>
-              </ul>
-            </Field>
-
-            <Field className="col-span-2" label="Stack">
-              <ul className="flex flex-col gap-0.5">
-                {stack.map((entry) => (
-                  <li key={entry}>{entry}</li>
-                ))}
-              </ul>
-            </Field>
-
-            <Field className="col-span-2 md:col-span-4" label="Inspired by">
-              {/*
-                Cancelling the cell padding and repeating the parent's column
-                count and gap lands these columns on the same grid lines as the
-                cells above, rather than dividing the padded width.
-              */}
-              <ol className="-mx-4 grid grid-cols-2 gap-x-px gap-y-0.5 font-sans md:grid-cols-4">
-                {INSPIRED_BY.map((name, index) => (
-                  <li className="flex gap-2 px-4" key={name}>
-                    {/* Hidden: the list element already conveys the position. */}
-                    <span
-                      className="font-mono text-muted-foreground/80"
-                      aria-hidden
-                    >
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    {name}
-                  </li>
-                ))}
-              </ol>
-            </Field>
-          </dl>
-        </div>
-
         <div className="screen-line-top h-4" />
 
         <div className="screen-line-top screen-line-bottom flex flex-col items-center justify-center gap-x-4 gap-y-3 px-4 py-3 text-sm text-muted-foreground sm:flex-row sm:justify-between">
@@ -177,21 +68,6 @@ export function SiteFooterCad() {
           </div>
 
           <div className="flex items-center gap-3">
-            <a
-              className="flex items-center transition-[color] hover:text-foreground"
-              href={xLink.href}
-              target="_blank"
-              rel="noopener"
-              aria-label="X Profile"
-            >
-              <XIcon className="size-4" />
-            </a>
-
-            <Separator
-              orientation="vertical"
-              className="data-vertical:h-4 data-vertical:self-center"
-            />
-
             <a
               className="flex items-center transition-[color] hover:text-foreground"
               href={githubLink.href}
@@ -237,8 +113,6 @@ export function SiteFooterCad() {
           </div>
         </div>
       </div>
-
-      <SiteFooterInteractiveLogotype />
 
       <div className="h-(--fade-bottom-height)" />
       <div className="pb-[env(safe-area-inset-bottom,0)]" />

@@ -73,11 +73,6 @@ function SocialLinkItem({ icon, title, href }: SocialLink) {
 
 const SOCIAL_LINKS: SocialLink[] = [
   {
-    icon: "https://assets.chanhdai.com/images/link-icons/x.webp",
-    title: "X",
-    href: "https://x.com/iamncdai",
-  },
-  {
     icon: "https://assets.chanhdai.com/images/link-icons/github.webp",
     title: "GitHub",
     href: "https://github.com/ncdai",

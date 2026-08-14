@@ -1,5 +1,6 @@
 import { urlToName } from "@/utils/url"
 import {
+  GraduationCap,
   LinkIcon,
   MapPinIcon,
   MarsIcon,
@@ -75,9 +76,11 @@ export function Overview() {
         </IntroItem>
 
         <IntroItem>
-          <IntroItemIcon>{getGenderIcon(USER.gender)}</IntroItemIcon>
+          <IntroItemIcon>{<GraduationCap />}</IntroItemIcon>
           <IntroItemContent aria-label={`Pronouns: ${USER.pronouns}`}>
-            {USER.pronouns}
+            Istinye University | <em>2023 - Present</em>
+            <br />
+            Computer Engineering (English)
           </IntroItemContent>
         </IntroItem>
       </PanelContent>
@@ -85,15 +88,4 @@ export function Overview() {
       <div className="pointer-events-none absolute inset-y-0 left-1/2 -z-1 w-px -translate-x-2.25 border-r border-dashed border-line max-sm:hidden" />
     </Panel>
   )
-}
-
-function getGenderIcon(gender: User["gender"]) {
-  switch (gender) {
-    case "male":
-      return <MarsIcon />
-    case "female":
-      return <VenusIcon />
-    case "non-binary":
-      return <NonBinaryIcon />
-  }
 }
