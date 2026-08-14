@@ -103,26 +103,6 @@ export default function ComponentsShowcasePage() {
           <TooltipTrigger
             render={
               <Button
-                className="size-7 border-none text-muted-foreground"
-                variant="ghost"
-                size="icon-sm"
-                nativeButton={false}
-                render={<Link href="/components" />}
-                aria-label="List"
-              >
-                <Grip />
-              </Button>
-            }
-          />
-          <TooltipContent>
-            <p>List</p>
-          </TooltipContent>
-        </Tooltip>
-
-        <Tooltip>
-          <TooltipTrigger
-            render={
-              <Button
                 className="size-7"
                 variant="outline"
                 size="icon-sm"

@@ -478,7 +478,7 @@ export const TECH_STACK: TechStack[] = [
         id="flag-icons-tr"
         viewBox="0 0 512 512"
       >
-        <g fill-rule="evenodd">
+        <g fillRule="evenodd">
           <path fill="#e30a17" d="M0 0h512v512H0z" />
           <path
             fill="#fff"

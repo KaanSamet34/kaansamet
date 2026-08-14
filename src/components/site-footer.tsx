@@ -5,7 +5,6 @@ import { SiteFooterInteractiveLogotype } from "@/components/site-footer-brand"
 import { SOCIAL } from "@/features/portfolio/data/social-links"
 
 export function SiteFooter() {
-  const xLink = SOCIAL.x
   const githubLink = SOCIAL.github
   const linkedinLink = SOCIAL.linkedin
 
@@ -17,20 +16,6 @@ export function SiteFooter() {
         </div>
 
         <dl className="flex flex-col gap-4 py-8 font-mono [&_dd]:text-sm [&_dt]:text-right [&_dt]:text-sm [&_dt]:text-muted-foreground [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-2">
-          <Item>
-            <dt>Crafted by</dt>
-            <dd>
-              <a
-                className="link-underline"
-                href={xLink.href}
-                target="_blank"
-                rel="noopener"
-              >
-                {xLink.handle}
-              </a>
-            </dd>
-          </Item>
-
           <Item>
             <dt>Inspired by</dt>
             <dd>
@@ -101,18 +86,6 @@ export function SiteFooter() {
 
         <div className="screen-line-top screen-line-bottom flex w-full before:z-1 after:z-1">
           <div className="mx-auto flex items-center justify-center gap-3 border-x border-line bg-background px-4">
-            <a
-              className="flex items-center text-muted-foreground transition-[color] hover:text-foreground"
-              href={xLink.href}
-              target="_blank"
-              rel="noopener"
-              aria-label="X Profile"
-            >
-              <XIcon className="size-4" />
-            </a>
-
-            <Separator />
-
             <a
               className="flex items-center text-muted-foreground transition-[color] hover:text-foreground"
               href={githubLink.href}

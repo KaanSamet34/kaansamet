@@ -4,12 +4,6 @@ import { ArrowRightIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/base/ui/button"
-import {
-  ComponentItem,
-  ComponentItemDot,
-  ComponentItemIcon,
-  ComponentItemTitle,
-} from "@/app/(app)/(pages)/components/component-item"
 import { ComponentIcon } from "@/features/doc/components/component-icon"
 import { getComponentDocs } from "@/features/doc/data/documents"
 
@@ -47,48 +41,7 @@ export function Components() {
         </div>
 
         <div className="screen-line-bottom h-px" />
-
-        <ul className="grid grid-cols-1 overflow-x-clip sm:grid-cols-2 md:grid-cols-3">
-          {components.slice(0, 12).map((c) => (
-            <li
-              key={c.slug}
-              className={cn(
-                "max-sm:screen-line-bottom",
-                "sm:max-md:nth-[2n+1]:screen-line-bottom",
-                "md:nth-[3n+1]:screen-line-bottom"
-              )}
-            >
-              <ComponentItem href={`/components/${c.slug}` as Route}>
-                <ComponentItemIcon>
-                  <ComponentIcon slug={c.slug} />
-                  {(c.metadata.new || c.metadata.updated) && (
-                    <ComponentItemDot
-                      aria-label={c.metadata.new ? "New" : "Updated"}
-                    />
-                  )}
-                </ComponentItemIcon>
-                <ComponentItemTitle as="h3">
-                  {c.metadata.title}
-                </ComponentItemTitle>
-              </ComponentItem>
-            </li>
-          ))}
-        </ul>
-
         <div className="screen-line-top h-4 before:-top-px" />
-      </div>
-
-      <div className="screen-line-top flex justify-center py-4">
-        <Button
-          className="gap-2 pr-2.5 pl-3 shadow-[inset_0_0_1px] shadow-foreground/20"
-          variant="secondary"
-          size="sm"
-          nativeButton={false}
-          render={<Link href="/components" />}
-        >
-          All components
-          <ArrowRightIcon />
-        </Button>
       </div>
     </Panel>
   )

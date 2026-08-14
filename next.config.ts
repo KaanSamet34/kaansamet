@@ -60,7 +60,7 @@ const nextConfig: NextConfig = {
     BUILD_TIMESTAMP: new Date().toISOString(),
   },
   reactStrictMode: true,
-  typedRoutes: true,
+  typedRoutes: false,
   transpilePackages: ["next-mdx-remote"],
   allowedDevOrigins: ["ncdai.localhost", "ncdai.local"],
   devIndicators: false,

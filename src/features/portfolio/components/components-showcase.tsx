@@ -112,19 +112,6 @@ export function ComponentsShowcase() {
           <ShimmeringTextDemo2 />
         </GridItem>
       </div>
-
-      <div className="screen-line-top flex justify-center py-2">
-        <Button
-          className="gap-2 pr-2.5 pl-3"
-          variant="secondary"
-          size="sm"
-          nativeButton={false}
-          render={<Link href="/components" />}
-        >
-          All Components
-          <ArrowRightIcon />
-        </Button>
-      </div>
     </Panel>
   )
 }

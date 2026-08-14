@@ -37,12 +37,6 @@ export const metadata: Metadata = {
       alt: title,
     },
   },
-  twitter: {
-    card: "summary_large_image",
-    site: X_HANDLE,
-    creator: X_HANDLE,
-    images: [ogImage],
-  },
 }
 
 function getBlogJsonLd(

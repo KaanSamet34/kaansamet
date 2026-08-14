@@ -12,6 +12,8 @@ export const SITE_INFO = {
   keywords: USER.keywords,
 }
 
+export const SPONSORSHIP_URL = "https://github.com/sponsors/KaanSamet34"
+
 export const LICENSE = {
   name: "MIT License",
   url: "https://github.com/ncdai/chanhdai.com/blob/main/LICENSE",

@@ -63,16 +63,6 @@ export function Testimonials() {
 
   return (
     <Panel ref={ref} id={ID}>
-      <PanelHeader>
-        <PanelTitle>
-          Trusted by
-          <span className="block sm:hidden" /> top builders on{" "}
-          <a href={SOCIAL.x.href} target="_blank" rel="noopener" aria-label="X">
-            𝕏
-          </a>
-        </PanelTitle>
-      </PanelHeader>
-
       <div className="grid gap-4 py-4 sm:hidden">
         {TESTIMONIALS_MOBILE.map((item) => (
           <TestimonialItem
@@ -106,19 +96,6 @@ export function Testimonials() {
           play={play}
         />
       </PanelContent>
-
-      <div className="screen-line-top flex justify-center py-4">
-        <Button
-          className="gap-2 pr-2.5 pl-3 shadow-[inset_0_0_1px] shadow-foreground/20"
-          variant="secondary"
-          size="sm"
-          nativeButton={false}
-          render={<Link href="/testimonials" />}
-        >
-          All builders
-          <ArrowRightIcon />
-        </Button>
-      </div>
     </Panel>
   )
 }
