@@ -120,25 +120,30 @@ export function ExperiencePositionItem({
   )
 }
 
-function formatDuration(start: string, end?: string): string {
-  const startHasMonth = start.includes(".")
-  const endHasMonth = end ? end.includes(".") : true
+export function formatDuration(start: string, end?: string): string {
+  const startDate = parsePeriodDate(start, "first")
+  const endDate = end ? parsePeriodDate(end, "last") : new Date()
 
-  // Both year-only: granularity is years, no month arithmetic needed.
-  if (!startHasMonth && end && !endHasMonth) {
-    const years = parseInt(end, 10) - parseInt(start, 10)
+  if (
+    !Number.isFinite(startDate.getTime()) ||
+    !Number.isFinite(endDate.getTime())
+  ) {
+    return ""
+  }
+
+  const startIsYearOnly = /^\d{4}$/.test(start.trim())
+  const endIsYearOnly = end ? /^\d{4}$/.test(end.trim()) : true
+
+  if (startIsYearOnly && end && endIsYearOnly) {
+    const years = Number.parseInt(end, 10) - Number.parseInt(start, 10)
     if (years <= 0) {
       return ""
     }
     return `${years}y`
   }
 
-  const startDate = parsePeriodDate(start, "first")
-  const endDate = end ? parsePeriodDate(end, "last") : new Date()
-
-  // +1 to count both the start and end months inclusively.
   const totalMonths = differenceInMonths(endDate, startDate) + 1
-  if (totalMonths <= 0) {
+  if (!Number.isFinite(totalMonths) || totalMonths <= 0) {
     return ""
   }
 
@@ -155,12 +160,23 @@ function formatDuration(start: string, end?: string): string {
 }
 
 function parsePeriodDate(str: string, fallbackMonth: "first" | "last"): Date {
-  if (str.includes(".")) {
-    return parse(str, "MM.yyyy", new Date())
+  const normalized = str.trim()
+
+  if (/^\d{4}$/.test(normalized)) {
+    return parse(
+      `${fallbackMonth === "last" ? "12" : "01"}.${normalized}`,
+      "MM.yyyy",
+      new Date()
+    )
   }
-  return parse(
-    `${fallbackMonth === "last" ? "12" : "01"}.${str}`,
-    "MM.yyyy",
-    new Date()
-  )
+
+  if (/^\d{1,2}\.\d{4}$/.test(normalized)) {
+    return parse(normalized, "MM.yyyy", new Date())
+  }
+
+  if (/^\d{1,2}\.\d{1,2}\.\d{4}$/.test(normalized)) {
+    return parse(normalized, "dd.MM.yyyy", new Date())
+  }
+
+  return parse(normalized, "dd.MM.yyyy", new Date())
 }
